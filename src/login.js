@@ -5,7 +5,6 @@ import { EmailRounded, HttpsRounded, Person2Rounded} from '@mui/icons-material';
 const Login = () => {
     const [login, setlogin] = useState(false);
     const [data, setdata] = useState("");
-
     const password =document.getElementById('password');
     const confirmpassword =document.getElementById('confirmpassword');
 
