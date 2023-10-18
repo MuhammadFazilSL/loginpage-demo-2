@@ -88,6 +88,7 @@
     margin: 15px 10px 0 0;
     font-size: 16px;
 }
+
 small{
     margin-top: 10px;
     color: red;
@@ -151,3 +152,18 @@ small{
 
  
 }
+/*
+echo "# loginpage" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MuhammadFazilSL/loginpage.git
+git push -u origin main
+
+
+
+git remote add origin https://github.com/MuhammadFazilSL/loginpage.git
+git branch -M main
+git push -u origin main
+*/
