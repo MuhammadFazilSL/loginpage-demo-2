@@ -10,9 +10,11 @@ const Login = () => {
 
     function handlelogin () {
         setlogin(true)
+         formreset();
     }
     function handlesignup () {
         setlogin(false) 
+        
     }
     function handleinputs(event) {
       setdata(event.target.value)  
@@ -33,9 +35,6 @@ const Login = () => {
           }
       }
        }
-    
-   
- 
     function setError() {
       const error=document.querySelector('small')
       error.className='error'
@@ -53,9 +52,9 @@ const Login = () => {
      <form className="login-page" onSubmit={handleSubmit} id='forms'>
         
           <div className='titles'>
-           <h2 onClick={handlesignup } className={login?'login':'signup' }>Sign up</h2>
+           <h2 onClick={handlesignup } className={login?'login': 'signup'}>Sign up</h2>
           
-           <h2 onClick={handlelogin} className={login? 'login':'signup' }>Login</h2>
+           <h2 onClick={handlelogin} className={login?'signup'   : 'login'}>Login</h2>
           </div>
          
     
@@ -74,11 +73,11 @@ const Login = () => {
   </div>
    }
    <div  className='input-container'>
-       
-   <input type="email" placeholder='Email'  required className="inputfield"/>
-    <IconButton>
+   <IconButton>
     <EmailRounded />
    </IconButton>
+   <input type="email" placeholder='Email'  required className="inputfield"/>
+
    </div>
    
 
@@ -93,13 +92,15 @@ const Login = () => {
   login?
   <div></div>
   :
+  <>
   <div  className='input-container'>
-     <input type="password" placeholder='Confirm Password'  required  minLength={5} className="inputfield" id='confirmpassword'/>
-  <IconButton>
+    <IconButton>
     <HttpsRounded />
    </IconButton>
-  <small className=''>password does not match</small>
+     <input type="password" placeholder='Confirm Password'  required  minLength={5} className="inputfield" id='confirmpassword'/>
   </div>
+   <small className=''>password does not match</small>
+  </>
  }
 
   <div className='checkbox'>
@@ -108,7 +109,7 @@ const Login = () => {
   :
    <div>
      <input type="checkbox" id='terms'  required name='terms'/>
-     <label htmlFor="terms">I accept the <a href="#">terms& conditions</a></label>
+     <label htmlFor="terms">I accept the <a href="#">terms & conditions</a></label>
     </div>
   }
    

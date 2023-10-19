@@ -13,6 +13,12 @@
     padding: 10px;
     border-radius: 15px;
 }
+.login-page>p{
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
 .titles{
     display: flex;
     justify-content: space-between;
@@ -23,7 +29,9 @@
 }
 .titles>h2{
     cursor: pointer ;
+    font-size: 20px;
 }
+
 .login-page>.loginline{
     width: 55px;
     height: 8px;
@@ -44,32 +52,37 @@
     height: 30px;
     border-radius: 5px;
 }
+.signup{
+    position: relative;
+}
 .signup:after{
     content: "";
     position: absolute;
     background-color: rgb(75, 5, 75);
     height: 5px;
-    width: 25%;
+    width: 75%;
     left: 10%;
     bottom: -10px;
-    transition: 0.3s;
+    transition: 3s;
     border-radius: 20px;
+}
+/*
+.login{
+    position: relative;
 }
 .login:after{
     content: "";
     position: absolute;
     background-color: rgb(75, 5, 75);
     height: 5px;
-    width: 25%;
-    left: 70%;
+    width: 75%;
+    left: 25%;
     bottom: -10px;
     transition: 0.3s;
     border-radius: 20px;
 }
-.login-page>p{
-    font-size: 14px;
-    
-}
+*/
+
 .login-page>.buttons>button{
     border: none;
     background-color: rgb(75, 5, 75);
@@ -96,6 +109,7 @@ small{
 }
 .error{
     display: block;
+  
 }
 .none{
     display: none;
@@ -108,19 +122,22 @@ small{
     display: flex;
     margin-top: 10px;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
-
-.css-78trlr-MuiButtonBase-root-MuiIconButton-root{
+.input-container>button{
     position: absolute !important;
     margin-top: 8px !important;
     cursor: none !important;
-    font-size: 14px;
+    font-size: 14px !important;
     left: 0;
 }
-.css-i4bv87-MuiSvgIcon-root {
+.MuiSvgIcon-root,.MuiSvgIcon-fontSizeMedium,.css-i4bv87-MuiSvgIcon-root{
     font-size: 18px !important;
+
 }
+
+
 @media screen and (max-width:450px) {
     .login-page{
         width: 90%;
@@ -129,22 +146,59 @@ small{
     .titles{
         width: 60%;
     }
-    .titles>h2{
-        font-size: 18px;
+    
+    .input-container{
+        width: 95%;
+    }
+    .checkbox{
+        width: 90%;
     }
 }
 
-@media screen and (max-width:780px) {
+@media screen and (min-width:451px) {
     .login-page{
         width: 70%;
         right: 15%;
     }   
+    .titles{
+        width: 60%;
+    }
+  
+    .input-container{
+        width: 90%;
+    }
+    
+}
+@media screen and (min-width:760px) {
+    .login-page{
+        width: 70%;
+        right: 15%;
+    }     
+    .titles{
+        width: 40%;
+    }
+   
+    .input-container{
+        width: 80%;
+    }
  
 }
-@media screen and (max-width:1050px) {
+@media screen and (min-width:1020px) {
     .login-page{
-        width: 60%;
-        right: 20%;
+        width: 40%;
+        right: 30%;
+    }   
+    .titles{
+        width: 40%;
+    }
+    .input-container{
+        width: 70%;
+    }
+}
+@media screen and (min-width:1400px) {
+    .login-page{
+        width: 40%;
+        right: 30%;
     }   
     .input-container{
         width: 70%;
